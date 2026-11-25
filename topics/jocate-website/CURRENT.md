@@ -18,7 +18,7 @@ _Last updated: 2026-11-25_
 - **Build gotchas:** CSS/JS version is `20261121m`; bump `$ver` in build-site.ps1 when CSS or JS change. Save the PowerShell build scripts as UTF-8 with BOM, or PowerShell 5.1 garbles non-ASCII characters.
 
 ## Open items
-- [ ] Privacy policy page (DPA 2019): the highest-priority legal gap, flagged by Mak-0.
+- [x] Privacy policy published at /privacy on 2026-11-25 (footer and form links). The user should review the wording.
 - [ ] Credit the satellite map image on /credits.
 - [x] Security headers and blocks on the unused WordPress endpoints: applied 2026-11-25 (.htaccess block JOCATE-HARDENING; backup .htaccess.bak-hardening).
 - [ ] User-supplied: photos, client permissions or quotes, registration details, Google Business Profile, product specifications.

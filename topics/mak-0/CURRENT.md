@@ -21,9 +21,12 @@ _Last updated: 2026-11-25_
 
 ## Open items
 - [x] ClamAV 1.5.5 installed with current signatures (2026-11-25). The first full ClamAV + YARA scan of 14,904 files was clean, and the weekly backup is 86 MB, sha256-verified.
-- Latest weekly result (2026-11-25 17:53): 1 fail (no privacy policy), 7 warn (all legal or low priority).
+- Latest weekly result (2026-11-25 17:53): 1 fail (no privacy policy; since fixed, and the privacy check now passes) and 7 warn (all legal or low priority).
 - [ ] For automatic report emails from Mak-0 itself: the user runs `tools\Set-Mak0Secret.ps1 -Name smtp` with the info@ mailbox password, then sets `alerts.email.enabled` to true. `sendReportFor` is already Daily and Weekly.
-- [ ] Optional free keys: `-Name urlhaus` (auth.abuse.ch), `-Name safebrowsing` (Google).
+- [ ] Keys (user):
+  - `-Name urlhaus`: free abuse.ch account.
+  - `-Name webrisk`: Google Web Risk. Safe Browsing v4 is non-commercial only, so Mak-0 prefers Web Risk since commit 044c7dc.
+  - Set-Mak0Secret tests each key on save.
 - [ ] Self-update: add a private GitHub remote (see README).
 - [ ] Legal attestations in the config: `legal.odpc.status` and `legal.clientNamesPermission.confirmed`.
-- [ ] Fix the site-side findings (topic jocate-website): privacy policy, headers, WordPress surface, satellite image credit.
+- [ ] Site-side findings still open (topic jocate-website): the satellite image credit and a terms page. The headers, WordPress surface and privacy policy are done.

@@ -6,6 +6,7 @@ Newest first within each topic. Every topic's `CURRENT.md` holds its live state.
 - 2026-11-25: [Handoff system set up](topics/claude-setup/2026-11-25-handoff-system.md). Mirrored to GitHub: michaelnjuguna376-lab/Claude-Summaries.
 
 ## jocate-website ([current](topics/jocate-website/CURRENT.md))
+- 2026-11-25: [Privacy policy page published](topics/jocate-website/2026-11-25-privacy-policy.md). Mak-0 privacy check now passes.
 - 2026-11-25: [Full site build summary](topics/jocate-website/2026-11-25-site-summary.md). Security headers and WordPress lockdown applied (JOCATE-HARDENING).
 
 ## jocate-data-agent ([current](topics/jocate-data-agent/CURRENT.md))
