@@ -3,7 +3,7 @@
 Newest first within each topic. Every topic's `CURRENT.md` holds its live state.
 
 ## claude-setup ([current](topics/claude-setup/CURRENT.md))
-- 2026-11-25: [Handoff system set up](topics/claude-setup/2026-11-25-handoff-system.md). Open: install git and connect the GitHub repo.
+- 2026-11-25: [Handoff system set up](topics/claude-setup/2026-11-25-handoff-system.md). Mirrored to GitHub: michaelnjuguna376-lab/Claude-Summaries.
 
 ## jocate-website ([current](topics/jocate-website/CURRENT.md))
 - (no handoffs yet; state seeded 2026-11-25)

@@ -8,5 +8,7 @@ _Last updated: 2026-11-25_
 - Project skills installed in the website project: frontend-design, ui-ux-pro-max, design-taste-frontend, impeccable, web-design-guidelines.
 - Custom agents: data-steward, potential-partners.
 
+- **GitHub mirror:** https://github.com/michaelnjuguna376-lab/Claude-Summaries (branch `main`). Connected 2026-11-25. Git for Windows 2.56.1 is installed at `C:\Program Files\Git`, and credentials are stored in Git Credential Manager.
+
 ## Open items
-- [ ] Install Git for Windows, create the private GitHub repo `claude-handoffs`, and connect it (steps in the 2026-11-25 handoff). Until then, sync is a no-op and handoffs are local only.
+- [ ] None.

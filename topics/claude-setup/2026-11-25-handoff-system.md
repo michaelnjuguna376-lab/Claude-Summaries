@@ -2,7 +2,7 @@
 date: 2026-11-25
 topic: claude-setup
 title: Handoff system set up
-status: in-progress
+status: done
 ---
 
 # Handoff system set up
@@ -25,10 +25,13 @@ Claude should write a handoff summary after every piece of structured work. The 
 - Located outside OneDrive. Git repos inside OneDrive tend to corrupt from sync conflicts.
 - Handoffs carry no secrets or personal data, because they are pushed to GitHub.
 
+## GitHub connection (done the same day)
+- Installed Git for Windows 2.56.1 with winget.
+- Ran `git init -b main` and set the remote to https://github.com/michaelnjuguna376-lab/Claude-Summaries.git. First commit 2112bb9, pushed after a GCM sign-in.
+- sync.ps1 falls back to `C:\Program Files\Git\cmd\git.exe` until VS Code is restarted and picks up the new PATH.
+
 ## Open items / next steps
-- [ ] User: `winget install --id Git.Git -e`, then restart VS Code.
-- [ ] User: create a private repo `claude-handoffs` on GitHub (empty, no README).
-- [ ] Then, in `C:\Users\User\claude-handoffs`: `git init -b main`, `git remote add origin https://github.com/michaelnjuguna376-lab/claude-handoffs.git`, `git add -A`, `git commit -m "init"`, `git push -u origin main`. The first push opens a browser login. After that, the Stop hook pushes automatically.
+- [ ] None. Restart VS Code once so the hooks load and git is on PATH.
 
 ## Pointers
 - `~/.claude/CLAUDE.md`, `~/.claude/settings.json`, `C:\Users\User\claude-handoffs\scripts\`

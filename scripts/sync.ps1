@@ -3,7 +3,9 @@
 $ErrorActionPreference = 'SilentlyContinue'
 $root = Split-Path -Parent $PSScriptRoot
 $git  = (Get-Command git -ErrorAction SilentlyContinue).Source
+if (-not $git -and (Test-Path 'C:\Program Files\Git\cmd\git.exe')) { $git = 'C:\Program Files\Git\cmd\git.exe' }
 if (-not $git) { exit 0 }
+$env:GIT_TERMINAL_PROMPT = '0'   # never hang a hook on a prompt; stored GCM credentials are used
 if (-not (Test-Path (Join-Path $root '.git'))) { exit 0 }
 
 Set-Location $root
