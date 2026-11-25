@@ -29,4 +29,5 @@ _Last updated: 2026-11-25_
   - Set-Mak0Secret tests each key on save.
 - [ ] Self-update: add a private GitHub remote (see README).
 - [ ] Legal attestations in the config: `legal.odpc.status` and `legal.clientNamesPermission.confirmed`.
-- [ ] Site-side findings still open (topic jocate-website): the satellite image credit and a terms page. The headers, WordPress surface and privacy policy are done.
+- Google Web Risk key stored (DPAPI, `config\secret-webrisk.xml`) on 2026-11-25. Lookups return 403 BILLING_DISABLED until the user enables billing on the Google Cloud project; Mak-0 reports this as a low-severity error with the reason.
+- Site-side findings: satellite credit, terms page and privacy policy are all done (2026-11-25).

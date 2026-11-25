@@ -19,7 +19,7 @@ _Last updated: 2026-11-25_
 
 ## Open items
 - [x] Privacy policy published at /privacy on 2026-11-25 (footer and form links). The user should review the wording.
-- [ ] Credit the satellite map image on /credits.
+- [x] Satellite map image credited (NASA Blue Marble via GIBS) on 2026-11-25. Terms of use published at /terms.
 - [x] Security headers and blocks on the unused WordPress endpoints: applied 2026-11-25 (.htaccess block JOCATE-HARDENING; backup .htaccess.bak-hardening).
 - [ ] User-supplied: photos, client permissions or quotes, registration details, Google Business Profile, product specifications.
 - [ ] Optional: re-add the Search Console Domain TXT record.
