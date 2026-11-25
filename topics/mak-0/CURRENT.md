@@ -20,7 +20,8 @@ _Last updated: 2026-11-25_
 - **First results (2026-11-25):** 0 fail, 10 warn. Malware clean. The warnings were security headers, the unused WordPress surface, MariaDB 11.8.10 available, and DMARC p=none. The report was emailed to info@jocateorg.com via the Gmail connector (sender account: the connected Gmail).
 
 ## Open items
-- [ ] The ClamAV install was running in the background on 2026-11-25 (slow connection, about 80 KB/s from GitHub). Confirm `bin\clamav-*` and `state\clamdb` exist, or check the next 05:30 Update report.
+- [x] ClamAV 1.5.5 installed with current signatures (2026-11-25). The first full ClamAV + YARA scan of 14,904 files was clean, and the weekly backup is 86 MB, sha256-verified.
+- Latest weekly result (2026-11-25 17:53): 1 fail (no privacy policy), 7 warn (all legal or low priority).
 - [ ] For automatic report emails from Mak-0 itself: the user runs `tools\Set-Mak0Secret.ps1 -Name smtp` with the info@ mailbox password, then sets `alerts.email.enabled` to true. `sendReportFor` is already Daily and Weekly.
 - [ ] Optional free keys: `-Name urlhaus` (auth.abuse.ch), `-Name safebrowsing` (Google).
 - [ ] Self-update: add a private GitHub remote (see README).

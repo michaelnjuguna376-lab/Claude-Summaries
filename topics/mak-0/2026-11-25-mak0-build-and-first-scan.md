@@ -63,3 +63,15 @@ The user asked for a local bot called Mak-0 to handle legal and security operati
 ## Pointers
 - Report: `C:\Users\User\Mak-0\reports\latest.html` · Logs: `C:\Users\User\Mak-0\logs\`
 - Install or reinstall: `powershell -ExecutionPolicy Bypass -File C:\Users\User\Mak-0\tools\Install-Mak0.ps1`
+
+## Final state (2026-11-25, 17:53)
+- ClamAV 1.5.5 installed (verified); signatures current.
+- Weekly run: the full archive was 86 MB, fetched in 5 parts of 20 MB with retries and sha256 verified against the server. The full ClamAV + YARA scan of 14,904 files was clean.
+- Result: 1 fail (no privacy policy) and 7 warn (DMARC p=none, low heuristics on Hostinger vendor files, MariaDB patch, no terms page, satellite image credit, ODPC status, client-name permission).
+- Bugs fixed during the session:
+  - The archive path was built with Split-Path, giving backslashes on a Linux server.
+  - The single-stream archive download was reset mid-transfer; it now comes in parts.
+  - Under 'Stop', curl's stderr became a fatal error.
+  - The regulatory watch flagged everything as new on its first run, and showed HTML entities.
+  - The admin and API code was not treated as a local source.
+- Mak-0 commits up to 0756166.
