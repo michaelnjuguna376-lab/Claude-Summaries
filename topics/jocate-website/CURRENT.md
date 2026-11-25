@@ -13,12 +13,13 @@ _Last updated: 2026-11-25_
 - **Public email:** info@jocateorg.com (Hostinger mailbox). Agent reports go to the company Gmail inbox set in the server config.
 - **Forms** (partner, supplier, calculator) POST to `/api/submit.php`, then hand off to WhatsApp or email. Page views and contact clicks go to `/api/track.php` (first-party, cookieless analytics). See [jocate-data-agent](../jocate-data-agent/CURRENT.md).
 - **Search Console:** verified by the HTML meta tag (URL-prefix property). Never remove the tag from the home page.
-- **Monitoring:** Mak-0 (local bot, topic [mak-0](../mak-0/CURRENT.md)) watches the site hourly, daily and weekly.
+- **Monitoring:** Mak-0 (local bot, topic [mak-0](../mak-0/CURRENT.md)) watches the site. Results show in the admin under Security (Mak-0) at `/admin/?view=security`.
+- **Hardening (2026-11-25):** HSTS, nosniff, X-Frame-Options, Referrer-Policy and Permissions-Policy headers; directory listing off; wp-login.php, xmlrpc.php, readme.html, license.txt and the WordPress user-list API return 403. All in the `.htaccess` block JOCATE-HARDENING (remove the block to undo).
 - **Build gotchas:** CSS/JS version is `20261121m`; bump `$ver` in build-site.ps1 when CSS or JS change. Save the PowerShell build scripts as UTF-8 with BOM, or PowerShell 5.1 garbles non-ASCII characters.
 
 ## Open items
 - [ ] Privacy policy page (DPA 2019): the highest-priority legal gap, flagged by Mak-0.
 - [ ] Credit the satellite map image on /credits.
-- [ ] Security headers in .htaccess; block the unused WordPress endpoints (wp-login, readme, wp-json, xmlrpc).
+- [x] Security headers and blocks on the unused WordPress endpoints: applied 2026-11-25 (.htaccess block JOCATE-HARDENING; backup .htaccess.bak-hardening).
 - [ ] User-supplied: photos, client permissions or quotes, registration details, Google Business Profile, product specifications.
 - [ ] Optional: re-add the Search Console Domain TXT record.
